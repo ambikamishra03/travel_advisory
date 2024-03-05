@@ -5,6 +5,7 @@ const List = () => {
     <div>
       <h1>List
       Hello </h1>
+      <h2>fg</h2>
       
     </div>
   )

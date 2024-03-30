@@ -20,6 +20,8 @@
   margin-right: var(--theme-spacing-2);
   margin-left: 0;
   width: 100%;
+  border-radius: 12px;
+  
 }
 
 .search:hover {
@@ -34,13 +36,14 @@
 }
 
 .searchIcon {
-  padding: 0 var(--theme-spacing-2);
+  padding: 6px;
   height: 100%;
   position: absolute;
   pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 80%;
 }
 
 .inputRoot {

@@ -1,0 +1,33 @@
+.formControl {
+  margin: var(--theme-spacing-1);
+  width: 130px;
+  margin-bottom: 30px;
+}
+
+.inputlabel{
+  font-size:24px;
+  margin:10px;
+}
+.selectEmpty {
+  margin-top: var(--theme-spacing-2);
+}
+
+.loading {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 25px;
+}
+
+.marginBottom {
+  margin-bottom: 30px;
+}
+
+.list {
+  height: 75vh;
+  overflow: auto;
+}

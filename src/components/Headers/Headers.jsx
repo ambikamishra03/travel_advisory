@@ -6,14 +6,29 @@ import './styles.css'
 
 const Headers = ({setCoordinates}) => {
 
-    const [autocomplete, setAutocomplete] = useState()
+    const [autocomplete, setAutocomplete] = useState(null)
     
     const onLoad = (autoc) => setAutocomplete(autoc);
+    // const onPlaceChanged = () => {
+    //   const lat = autocomplete.getPlace().geometry.location.lat();
+    //   const lng = autocomplete.getPlace().geometry.location.lng();
+    //   setCoordinates({lat,lng});
+    // }
     const onPlaceChanged = () => {
-      const lat = autocomplete.getPlace().geometry.location.lat()
-      const lng = autocomplete.getPlace().geometry.location.lng()
-      setCoordinates({lat,lng});
+      if (autocomplete) {
+        const place = autocomplete.getPlace();
+        if (place.geometry && place.geometry.location) {
+          const lat = place.geometry.location.lat();
+          const lng = place.geometry.location.lng();
+          setCoordinates({ lat, lng });
+        } else {
+          console.error("Cannot get place geometry or location.");
+        }
+      } else {
+        console.error("Autocomplete is not loaded yet.");
+      }
     }
+    
 
   return (
     <div>

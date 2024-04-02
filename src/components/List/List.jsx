@@ -5,7 +5,8 @@ import {
   InputLabel,
   MenuItem,
   FormControl,
-  Select
+  Select,
+  Box
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import PlaceDetails from '../PlaceDetails/PlaceDetails' 
@@ -29,7 +30,7 @@ const List = ({ places, type, setType, rating, setRating, childClicked, isLoadin
         </div>
       ) : (
         <>
-          <FormControl className="formControl">
+          <Box style={{height:'70px',margin:'8px'}}><FormControl className="formControl">
             <InputLabel id="type">Type</InputLabel>
             <Select id="type" value={type} onChange={(e) => setType(e.target.value)}>
               <MenuItem value="restaurants">Restaurants</MenuItem>
@@ -45,7 +46,7 @@ const List = ({ places, type, setType, rating, setRating, childClicked, isLoadin
               <MenuItem value="4">Above 4.0</MenuItem>
               <MenuItem value="4.5">Above 4.5</MenuItem>
             </Select>
-          </FormControl>
+          </FormControl></Box>
           <Grid container spacing={3} className="list">
             {places?.map((place, i) => (
               <Grid ref={elRefs[i]} key={i} item xs={12}>

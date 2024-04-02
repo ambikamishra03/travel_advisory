@@ -66,4 +66,5 @@
 .toolbar {
   display: flex;
   justify-content: space-between;
+  background-color: rgb(97, 197, 97);
 }

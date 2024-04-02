@@ -5,7 +5,7 @@
 }
 
 .inputlabel{
-  font-size:24px;
+  font-size:22px;
   margin:10px;
 }
 .selectEmpty {
@@ -28,6 +28,6 @@
 }
 
 .list {
-  height: 75vh;
+  height: 65vh;
   overflow: auto;
 }
